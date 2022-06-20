@@ -1,22 +1,44 @@
+[![Ruby](https://github.com/Amanetes/look-and-say/actions/workflows/main.yml/badge.svg)](https://github.com/Amanetes/look-and-say/actions/workflows/main.yml)
+
 # LookAndSay
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/look_and_say`. To experiment with that code, run `bin/console` for an interactive prompt.
+Программа генерирует последовательность «Посмотри-и-скажи» 
 
-TODO: Delete this and the text above, and describe your gem
+```ruby
+1
+11
+21
+1211
+111221
+312211
+13112221
+```
 
 ## Installation
 
-Install the gem and add to the application's Gemfile by executing:
+Clone this repository
 
-    $ bundle add look_and_say
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install look_and_say
+`git@github.com:Amanetes/look-and-say.git` 
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+bin/console
+
+sequence = LookAndSay::LNSGenerator.new
+generated_sequence = sequence.generate(5)
+
+LookAndSay.build_output(generated_sequence)
+
+==================================================Look And Say==================================================
+1
+11
+21
+1211
+111221
+312211
+================================================================================================================
+```
 
 ## Development
 
@@ -26,7 +48,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/look_and_say.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Amanetes/look_and_say.
 
 ## License
 
