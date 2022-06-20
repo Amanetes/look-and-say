@@ -9,7 +9,7 @@ module LookAndSay
 
     def generate(sequence_size)
       raise ::LookAndSay::Error, 'Please enter valid sequence size' unless sequence_size.positive?
-
+# Для одинаковых чисел в последовательности используется регулярное выражение
       sequence_size.times do
         @sequence << @sequence.last.gsub(/(.)\1*/) { |s| s.size.to_s + s[0] }
       end
